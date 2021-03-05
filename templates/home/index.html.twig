@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{{parent()}}{% endblock %}
+
+{% block body %}
+    <section class="container">
+        <div class="top-bar">
+        </div>
+        <div class="center-block-home">
+            <img class="home-logo" src="{{ asset('/build/images/wizicost-logo.png') }}" alt="Logo WiziCost"/>
+            <div class="brand-name">
+                <div class="wizi-white">Wizi</div>
+                <div class="cost-white">Cost</div>
+            </div>
+            <div class="block-button">
+                {% if app.user %}
+                    <div class="containerAuthButtons">
+
+                        <button class="submitConnexion" type="submit"><a href="/resource/new">Entrer</a></button>
+                        <p>Bienvenue {{ app.user.email }}</p>
+
+                        <a class="loggedPageLogoutButton" href="{{ path('app_logout') }}">D&eacute;connexion</a>
+                    </div>
+                {% else %}
+                    <div class="containerAuthButtons">
+                        <button class="submitConnexion" type="submit"><a href="{{ path('app_login') }}">S'identifier</a></button>
+                        <a class="subscriptionText" href="{{ path('app_register') }}">Pas encore inscrit ? Cr&eacute;ez un compte !</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="bottom-bar">
+        </div>
+    <section>
+{% endblock %}

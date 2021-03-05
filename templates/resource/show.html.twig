@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ressource{{ parent() }}{% endblock %}
+
+{% block body %}
+    <section class="container">
+        <div class="top-bar">
+            <div class="top-brand-name">
+                <div class="wizi-white">Wizi</div>
+                <div class="cost-white">Cost</div>
+            </div>
+        </div>
+        <div class="center-block-ressource">
+            <h1>Votre ressource</h1>
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Libellé</th>
+                        <td>{{ resource.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Catégorie</th>
+                        {% if resource.category %}
+                            <td>{{ resource.category.name }}</td>
+                        {% endif %}
+                    </tr>
+                    <tr>
+                        <th>Type de machine</th>
+                        {% if resource.machineType %}
+                            <td>{{ resource.machineType.type }}</td>
+                        {% endif %}
+                    </tr>
+                    <tr>
+                        <th>Marque</th>
+                        {% if resource.brand %}
+                            <td>{{ resource.brand.brand }}</td>
+                        {% endif %}
+                    </tr>
+                    <tr>
+                        <th>Modèle</th>
+                        {% if resource.model %}
+                            <td>{{ resource.model.model }}</td>
+                        {% endif %}
+                    </tr>
+                    <tr>
+                        <th>Option</th>
+                        {% if resource.optional %}
+                            <td>{{ resource.optional.name }}</td>
+                        {% endif %}
+                    </tr>
+                    <tr>
+                        <th>Valeur</th>
+                        <td>{{ resource.value }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a class="edit-ressource-btn" href="{{ path('resource_edit', {'id': resource.id}) }}"><button class="btn">Modifier</button></a>
+
+            {{ include('resource/_delete_form.html.twig') }}
+
+            <a class="resource-list" href="{{ path('resource_index') }}">Liste des ressources</a>
+        </div>
+        <div class="bottom-bar">
+        </div>
+    <section>
+{% endblock %}
