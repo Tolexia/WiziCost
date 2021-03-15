@@ -3,7 +3,7 @@ Welcome to WiziCost !
 It is a 52hours-hackathon project which consists in an interactive formular to simulate a price (false one for development) of a resource that could propose a farmer to another one, in a spirit of mutual aid.
 
 If you want to download and run it, make sure you have PHP, mySQL or postgreSQL, composer and yarn installed of your computer, and follow these few steps :
-(if you don't have symfony installed on your computer, replace "symfony console" by "php/bin console" for commands in the next lines)
+(if you don't have symfony installed on your computer, replace "symfony console" by "php bin/console" for commands in the next lines)
 
 * git clone the project
 * run composer install
