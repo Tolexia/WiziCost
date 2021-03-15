@@ -6,6 +6,7 @@ If you want to download and run it, make sure you have PHP, mySQL or postgreSQL,
 (if you don't have symfony installed on your computer, replace "symfony console" by "php bin/console" for commands in the next lines)
 
 * git clone the project
+* move into the project folder
 * run composer install
 * run yarn install
 * copy .env file that is in the root folder of the project and name it .env.local
