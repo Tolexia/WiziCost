@@ -18,3 +18,11 @@ If you want to download and run it, make sure you have PHP, mySQL or postgreSQL,
 * run "symfony server:start" or "php -S localhost:8000" if you don't have symfony installed on your computer
 
  ** Enjoy !**
+
+## Previews
+
+![](./1.jpg)
+![](./2.jpg)
+![](./3.jpg)
+![](./4.jpg)
+![](./5.jpg)
